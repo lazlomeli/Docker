@@ -1,15 +1,16 @@
 FROM ubuntu:latest
 
-#EXPOSE 8080
+EXPOSE 8000
 VOLUME /var/www/html
-#VOLUME /var/lib/mysql
 
 RUN apt update
 RUN apt upgrade
+RUN apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Apache2
+RUN apt update
 RUN apt install apache2 -y
 
 # PHP
@@ -18,14 +19,8 @@ RUN apt install libapache2-mod-php php php-mysql -y
 # MySQL
 RUN apt install mysql-server -y
 
-ENV MYSQL_ROOT_PASSWORD=root
-ENV MYSQL_DATABASE=wordpress
-ENV MYSQL_USER=wpuser
-ENV MYSQL_PASSWORD=wppass
-
-RUN mysql -u root -e "CREATE DATABASE wordpress"
-RUN mysql -u root -e "CREATE USER 'wpuser'@'127.0.0.1' IDENTIFIED BY 'wppass'"
-RUN mysql -u root -e "GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'127.0.0.1'"
+#
+RUN apt install unzip
 
 # Wordpress
 RUN wget -c http://wordpress.org/latest.zip
