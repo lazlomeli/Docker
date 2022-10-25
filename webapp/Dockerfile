@@ -26,5 +26,6 @@ RUN cp wp-config-sample.php wp-config.php
 RUN sed -i 's/database_name_here/wordpress/' wp-config.php
 RUN sed -i 's/username_here/wpuser/' wp-config.php
 RUN sed -i 's/password_here/wppass/' wp-config.php
+RUN sed -i 's/localhost/webapp_cont/' wp-config.php
 
 CMD [ "/usr/sbin/apache2ctl", "-D", "FOREGROUND" ]
