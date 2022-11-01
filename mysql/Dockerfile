@@ -1,7 +1,13 @@
 FROM mysql:latest
 
-ENV MYSQL_ALLOW_EMPTY_PASSWORD=1
+# docker run --name db --network=nw -v db_vol:/var/lib/mysql db_img
+
+VOLUME [ "/var/lib/mysql" ]
+
+ENV MYSQL_ROOT_PASSWORD=secret
 
 COPY ./wordpress.sql /docker-entrypoint-initdb.d/
 
-# ubuntu image
+ENTRYPOINT ["docker-entrypoint.sh"]
+
+CMD [ "mysqld" ]
