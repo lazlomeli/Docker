@@ -2,6 +2,8 @@ FROM mysql:latest
 
 # docker run --name db --network=nw -v db_vol:/var/lib/mysql db_img
 
+LABEL author="Lazlo Meli <lazlomeli@gmail.com>"
+
 VOLUME [ "/var/lib/mysql" ]
 
 ENV MYSQL_ROOT_PASSWORD=secret
