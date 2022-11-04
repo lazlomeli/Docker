@@ -4,6 +4,8 @@ FROM mysql:latest
 
 LABEL author="Lazlo Meli <lazlomeli@gmail.com>"
 
+EXPOSE 3306
+
 VOLUME [ "/var/lib/mysql" ]
 
 ENV MYSQL_ROOT_PASSWORD=secret
