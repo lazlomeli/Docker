@@ -109,11 +109,15 @@ I tested the server with:
 - **100** petitions with **5** concurrent petitions
 - **200** petitions with **20** concurrent petitions
 - **300** petitions with **30** concurrent petitions
-- **350** petitions with **35** concurrent petitions
+- **500** petitions with **50** concurrent petitions
+- **1000** petitions with **100** concurrent petitions
 
 After all the tests, I collected the data and graphied it:
 > Time per request in milliseconds
 
+![image](https://user-images.githubusercontent.com/72606659/200007245-850798ff-7ebe-4aff-b979-05f55fee0a49.png)
+
+Docker is way more efficient. Aproximately **3x more efficient** than Vagrant where 300 petitions took 1/3 than what Vagrant took. Docker app could also take 1000 petitions with 100 concurrent ones and even more.
 
 Now, let's compare this project's performance to the [Vagrant Wordpress App project's](https://github.com/lazlomeli/Vagrant) one:
 ______
