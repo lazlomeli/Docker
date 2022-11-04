@@ -113,7 +113,7 @@ I tested the server with:
 - **1000** petitions with **100** concurrent petitions
 
 After all the tests, I collected the data and graphied it:
-> Time per request in milliseconds
+> Time per request in seconds
 
 ![image](https://user-images.githubusercontent.com/72606659/200007245-850798ff-7ebe-4aff-b979-05f55fee0a49.png)
 
