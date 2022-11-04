@@ -33,7 +33,7 @@ _________
 
 ### 2. Running the project
 
-Docker Desktop has to be open and running. Once open, the bottom left window should look like this:
+Docker Desktop has to be open and running. Once opened, the bottom left window should look like this:
 > Docker Desktop succesfully running:
 
 ![image](https://user-images.githubusercontent.com/72606659/199951437-a8d591dc-7643-44b4-9bec-e54a0eaa748c.png)
