@@ -1,0 +1,35 @@
+version: '1.0'
+
+services:
+  db:
+    build: mysql/
+    image: "db_img"
+    container_name: db
+    volumes:
+      - "db_vol:/var/lib/mysql"
+    restart: always
+    networks:
+      nw: 
+        aliases: 
+          - nw
+
+  webapp:
+    build: webapp/
+    image: "webapp_img"
+    container_name: webapp
+    ports:
+      - 8000:80
+    volumes:
+      - "webapp_vol:/var/www/html"
+    restart: always
+    networks:
+      nw: 
+        aliases: 
+          - nw2
+
+networks:
+  nw: 
+
+volumes:
+  db_vol:
+  webapp_vol:
