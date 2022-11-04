@@ -117,9 +117,10 @@ After all the tests, I collected the data and graphied it:
 
 ![image](https://user-images.githubusercontent.com/72606659/200007245-850798ff-7ebe-4aff-b979-05f55fee0a49.png)
 
+Now, let's compare this project's performance to the [Vagrant Wordpress App project's](https://github.com/lazlomeli/Vagrant) one:
+
 Docker is way more efficient. Aproximately **3x more efficient** than Vagrant where 300 petitions took 1/3 than what Vagrant took. Docker app could also take 1000 petitions with 100 concurrent ones and even more.
 
-Now, let's compare this project's performance to the [Vagrant Wordpress App project's](https://github.com/lazlomeli/Vagrant) one:
 ______
 
 ### 5. End
