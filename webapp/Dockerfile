@@ -9,7 +9,7 @@ EXPOSE 80
 VOLUME [ "/var/www/html" ]
 WORKDIR /var/www/html
 
-ARG DEBIAN_FRONTEND=noninterac  tive
+ARG DEBIAN_FRONTEND=noninteractive
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
